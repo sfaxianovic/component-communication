@@ -7,7 +7,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ComponentBComponent implements OnInit {
 
-  @Input() messageFromA;
   constructor() { }
 
   ngOnInit() {

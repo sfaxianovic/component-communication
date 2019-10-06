@@ -1,4 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EventBusService} from '../../event-bus.service';
+import {Events} from '../../EmitEvent';
 
 @Component({
   selector: 'app-sub-b',
@@ -6,11 +8,13 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./sub-b.component.css']
 })
 export class SubBComponent implements OnInit {
-  @Input() messagefromA: string;
+  private messageFromSubA: string;
 
-  constructor() { }
+  constructor(private eventBusService: EventBusService) { }
 
   ngOnInit() {
+
+    this.eventBusService.on(Events.SUB_COMPONENT_A_EVENT, (message) => this.messageFromSubA = message );
   }
 
 }
