@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-component-b',
@@ -7,7 +7,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ComponentBComponent implements OnInit {
 
-  @Input() messageFromA;
   constructor() { }
 
   ngOnInit() {

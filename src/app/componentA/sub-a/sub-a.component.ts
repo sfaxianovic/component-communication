@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sub-a',
@@ -7,13 +7,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class SubAComponent implements OnInit {
 
-  @Output() messageOutPut =  new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
-  sendMessageToSubA() {
-    this.messageOutPut.emit('Hello from sub A');
-  }
 }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sub-b',
@@ -6,7 +6,6 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./sub-b.component.css']
 })
 export class SubBComponent implements OnInit {
-  @Input() messagefromA: string;
 
   constructor() { }
 
