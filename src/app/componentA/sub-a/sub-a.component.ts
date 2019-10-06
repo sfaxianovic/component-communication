@@ -8,12 +8,13 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class SubAComponent implements OnInit {
 
   @Output() messageOutPut =  new EventEmitter();
+  index = 0;
   constructor() { }
 
   ngOnInit() {
   }
 
   sendMessageToSubA() {
-    this.messageOutPut.emit('Hello from sub A');
+    this.messageOutPut.emit('Hello from sub A ' + this.index++);
   }
 }
