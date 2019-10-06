@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Contrat, ContratService} from '../../contrat.service';
 
 @Component({
   selector: 'app-sub-a',
@@ -7,9 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SubAComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contratService: ContratService) { }
 
+  index = 0;
   ngOnInit() {
   }
 
+
+  sendContratChanged() {
+    this.contratService.contratchanged(new Contrat('contrat changed from sub A' + this.index++));
+  }
 }
